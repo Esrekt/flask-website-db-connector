@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f1ecec;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin: 0 5%; /* Üst ve alt için 0, sol ve sağ için %5 boşluk bırak */
+}
+
+input[type="text"] {
+    width: 220px; /* Genişlik */
+    border: 2px solid #d1a6a6; /* Kenar rengi */
+    border-radius: 4px; /* Kenar yuvarlama */
+    background-color: #ffffff; /* Arka plan rengi (beyaz) */
+    color: #4d3f3f; /* Metin rengi */
+}
+
+button {
+    padding: 10px; /* İç boşluk */
+    background-color: #b4b4b4; /* Buton arka plan rengi (gri) */
+    color: white; /* Buton yazı rengi */
+    border: none; /* Kenar yok */
+    border-radius: 4px; /* Kenar yuvarlama */
+    cursor: pointer;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;  /* noktayı kaldırdık */
+}
+
+nav li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none; /* alt cizgiyi kaldırdık */
+}
+
+nav li {
+    display: inline;
+}
+
+section {
+    padding: 20px;
+    margin: 40px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(229, 201, 166);
+}
+
+.blog {
+    padding: 20px;
+    margin: 40px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ins {
+    color: white;
+}
+
+.ikon i {
+    font-size: 30px;
+}
+
+.ikon i:hover {
+    color: grey;
+}
+
+#hakkimda {
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+    justify-content: center; /* Dikey ortalama */
+    align-items: center; /* Yatay ortalama */
+    height: 100vh; /* Sayfanın tam yüksekliğini kapsaması için */
+    text-align: center;
+}
+#hakkimda:hover{
+    color: white;
+    text-decoration: none;
+}
+
+input[type="text"].form-control {
+    padding: 5px;
+    width: 100%; /* Tam genişlik */
+    max-width: 1200px; /* Maksimum genişlik */
+    margin-bottom: 20px; /* Aşağıda boşluk bırak */
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EŞREF EREN BULUT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='renk.css') }}">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>EŞREF EREN BULUT</h1>
+    <nav>
+        <ul>
+            <li><a href="#anasayfa">Ana Sayfa&nbsp;&nbsp;&nbsp;|</a></li>
+            <li><a href="#hakkimda">&nbsp; Hakkımda</a></li>
+            <h2>Güncel dolar kuru :{{dolar}}</h2>
+            <br><br>
+            <form action="?" method="get">
+                <input type="text" name="blogSearch" value="{{ search }}"placeholder="Arama yapmak için yazınız..." >
+                <button type="submit">Ara</button>
+            </form>
+            <div class="ikon">
+                <a href="https://www.instagram.com/esrektt/" target="_blank" class="ins">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Esrekt" target="_blank" class="ins">
+                    <i class="fab fa-github"> </i>
+                </a>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<section id="anasayfa">
+    <h2>Ana Sayfa</h2>
+    <p>Kişisel web sitem çeşitli konular hakkında yazı yazacağım</p>
+</section>
+
+<div class="container mt-4">
+    <div class="row">
+        {% for postum in posts %}
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ postum.title }}</h5>
+                        <p class="card-text">{{ postum.contentt }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<section id="yaziekle" class="container mt-4">
+    <h2>Yeni Blog Yazısı Ekle</h2>
+    <form action="{{ url_for('add_post') }}" method="POST">
+        <div class="form-group">
+            <label for="title">Başlık:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">İçerik:</label>
+            <textarea class="form-control" id="content" name="contentt" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Yazıyı Ekle</button>
+    </form>
+</section>
+
+<section id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p>Merhaba! Ben Eşref. Bu blogda hayatım, deneyimlerim ve öğrenme süreçlerim hakkında yazılar paylaşacağım.</p>
+</section>
+
+</body>
+</html>
